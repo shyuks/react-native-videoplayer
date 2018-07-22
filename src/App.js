@@ -10,10 +10,12 @@ const App = () => {
     
 
     return (
-        <View style={{flex: 1}}>
-            <Header headerText="Video Player" />
-            <VideoSection />
-        </View>
+        <Provider store={createStore(reducers)}>
+            <View style={{flex: 1}}>
+                <Header headerText="Video Player" />
+                <VideoSection />
+            </View>
+        </Provider>
     );
 };
 
